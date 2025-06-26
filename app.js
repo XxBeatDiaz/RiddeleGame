@@ -1,8 +1,8 @@
 import { question } from "readline-sync";
-import readline from "readline";
 import { Player } from "./classes/Player.js";
 import { Riddle } from "./classes/Riddle.js";
 import allRiddles from "./riddles/allRiddles.js";
+// import readline from "readline";
 
 
 const username = question(`Username: `); 
