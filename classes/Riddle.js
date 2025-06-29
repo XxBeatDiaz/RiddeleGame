@@ -1,21 +1,22 @@
-import { resolve } from "path";
-import readline from "readline";
 import { question } from "readline-sync";
+// import { resolve } from "path";
+// import readline from "readline";
 
 
 export class Riddle{
-    constructor(id, name, taskDescription, correctAnswer){
-        this.id = id;
-        this.name = name;
-        this.taskDescription = taskDescription;
-        this.correctAnswer = correctAnswer; 
+    constructor(objectRiddle){
+        this.id = objectRiddle.id;
+        this.type = objectRiddle.type;
+        this.name = objectRiddle.name;
+        this.taskDescription = objectRiddle.taskDescription;
+        this.correctAnswer = objectRiddle.correctAnswer; 
     }
 
     ask(){
         let endQuestion = false;
 
         while(!endQuestion){
-            this.displayQuestion()
+            this.displayQuestion();
             const answer = this.getAnswer();
 
             if(this.checkAnswer(answer)){
@@ -28,17 +29,21 @@ export class Riddle{
         }
     }
       
-    displayQuestion = function(){
+    displayQuestion(){
         console.log(`Difficulty level: ${this.name}\n`);       
         console.log(`${this.taskDescription}`);
     }
+
+    getRidleType(){
+        return this.type;
+    }
     
-    getAnswer = function(){
+    getAnswer(){
         const answer = question(`Enter your answer: `);
         return answer.trim();
     }
 
-    checkAnswer = function(answer){
+    checkAnswer(answer){
         let isCorrect = false;
         if (answer.toLowerCase() === this.correctAnswer.toLowerCase()) {
             isCorrect = true;

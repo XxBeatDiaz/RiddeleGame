@@ -1,6 +1,7 @@
 export default {
     id: 3,
+    type: "regular",
     name: "Advanceds Math",
-    taskDescription: "What is 5**2",
-    correctAnswer: "25"
+    taskDescription: "What is 7**2",
+    correctAnswer: "49"
 };
