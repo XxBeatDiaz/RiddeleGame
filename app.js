@@ -2,23 +2,18 @@ import { question } from "readline-sync";
 import { Player } from "./classes/Player.js";
 import { Riddle } from "./classes/Riddle.js";
 import allRiddles from "./riddles/allRiddles.js";
+import { loadRiddles } from "./riddleManger.js";
+import { runQuestions } from "./gameManger.js";
 // import readline from "readline";
 
-const username = question(`Username: `); 
+const username = question(`Username: `);
 const player = new Player(username);
 
-const loadedRiddles = allRiddles.map(
-    r => new Riddle(r.id, r.name, r.taskDescription, r.correctAnswer)
-);
+const loadedRiddles = loadRiddles(allRiddles);
+console.log(loadRiddles);
 
-for (const riddle of loadedRiddles) {
-    const startTime = Date.now();
-    riddle.ask();
-    const endTime = Date.now();
-    
-    const timeTaken = player.recordTime(startTime, endTime)
-    console.log(`Your time: ${timeTaken}\n`); 
-}
+runQuestions(loadedRiddles, player)
+
 console.clear();
 player.showStats();
 
@@ -28,7 +23,7 @@ player.showStats();
 //     const record = player.startRecord();
 //     await riddle.ask();
 //     const levelTime = player.endRecord(record);
-//     console.log(`Your time: ${levelTime}\n`);  
+//     console.log(`Your time: ${levelTime}\n`);
 // };
 
 // player.showStats();
