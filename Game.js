@@ -2,7 +2,7 @@
 import { question } from "readline-sync";
 import { Player } from "./classes/Player.js";
 import allRiddles from "./riddles/allRiddles.js";
-import { loadAllRiddles } from "./riddleManger.js";
+import { loadRiddles } from "./riddleManger.js";
 import { runQuestions } from "./gameManger.js";
 // import readline from "readline";
 
@@ -11,7 +11,7 @@ export const regularGame = function(){
     const username = question(`Username: `);
     const player = new Player(username);
     
-    const loadedRiddles = loadAllRiddles(allRiddles);
+    const loadedRiddles = loadRiddles(allRiddles);
     
     runQuestions(loadedRiddles, player);
     
