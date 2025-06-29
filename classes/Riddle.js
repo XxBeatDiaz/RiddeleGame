@@ -8,6 +8,7 @@ export class Riddle {
     constructor(objectRiddle) {
         this.id = objectRiddle.id;
         this.type = objectRiddle.type;
+        this.difficulty = objectRiddle.difficulty;
         this.name = objectRiddle.name;
         this.taskDescription = objectRiddle.taskDescription;
         this.correctAnswer = objectRiddle.correctAnswer;

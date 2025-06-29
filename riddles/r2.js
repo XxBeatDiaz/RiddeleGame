@@ -1,7 +1,8 @@
 export default {
     id: 2,
     type: "regular",
-    name: "Easy Math",
+    difficulty: "easy",
+    name: "math",
     taskDescription: "What is 7 * 3?",
     correctAnswer: "21"
 };
