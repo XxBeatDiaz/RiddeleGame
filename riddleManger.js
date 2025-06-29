@@ -21,4 +21,4 @@ const loadByDifficulty = function (riddles, difficultyChosen) {
     return loadRiddles(byDiffArr);
 }
 
-export { loadRiddles }
+export { loadRiddles, loadByDifficulty}
