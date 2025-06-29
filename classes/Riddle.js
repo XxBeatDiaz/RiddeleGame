@@ -45,10 +45,6 @@ export class Riddle{
         return isCorrect;
     }
 
-    
-
-
-
     // async asking
     // askSingl(query){
     //     const rl = readline.createInterface({

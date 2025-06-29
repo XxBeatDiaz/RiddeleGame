@@ -4,7 +4,6 @@ import { Riddle } from "./classes/Riddle.js";
 import allRiddles from "./riddles/allRiddles.js";
 // import readline from "readline";
 
-
 const username = question(`Username: `); 
 const player = new Player(username);
 
@@ -22,9 +21,6 @@ for (const riddle of loadedRiddles) {
 }
 console.clear();
 player.showStats();
-
-
-
 
 // async loop
 // for (const riddle of loadedRiddles) {
