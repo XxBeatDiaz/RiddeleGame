@@ -1,49 +1,55 @@
+//imports
 import { question } from "readline-sync";
 // import { resolve } from "path";
 // import readline from "readline";
 
 
-export class Riddle{
-    constructor(objectRiddle){
+export class Riddle {
+    constructor(objectRiddle) {
         this.id = objectRiddle.id;
         this.type = objectRiddle.type;
         this.name = objectRiddle.name;
         this.taskDescription = objectRiddle.taskDescription;
-        this.correctAnswer = objectRiddle.correctAnswer; 
+        this.correctAnswer = objectRiddle.correctAnswer;
     }
 
-    ask(){
+    //Ask the player this current riddle
+    ask() {
         let endQuestion = false;
 
-        while(!endQuestion){
+        while (!endQuestion) {
             this.displayQuestion();
             const answer = this.getAnswer();
 
-            if(this.checkAnswer(answer)){
+            if (this.checkAnswer(answer)) {
                 endQuestion = true;
                 console.log(`Congratulations :)`);
             }
-            else{
-                console.log(`Try again :(`);    
+            else {
+                console.log(`Try again :(`);
             }
         }
     }
-      
-    displayQuestion(){
-        console.log(`Difficulty level: ${this.name}\n`);       
+
+    //Helpe func for ask func
+    displayQuestion() {
+        console.log(`Difficulty level: ${this.name}\n`);
         console.log(`${this.taskDescription}`);
     }
 
-    getRidleType(){
+    //Return the type of the riddle (Regular, Multiple Choices...)
+    getRidleType() {
         return this.type;
     }
-    
-    getAnswer(){
+
+    //Get answer from player
+    getAnswer() {
         const answer = question(`Enter your answer: `);
         return answer.trim();
     }
 
-    checkAnswer(answer){
+    //Check if player answer is correct
+    checkAnswer(answer) {
         let isCorrect = false;
         if (answer.toLowerCase() === this.correctAnswer.toLowerCase()) {
             isCorrect = true;
@@ -51,7 +57,7 @@ export class Riddle{
         return isCorrect;
     }
 
-    // async asking
+    // async asking (try somthing)
     // askSingl(query){
     //     const rl = readline.createInterface({
     //         input: process.stdin, 
@@ -64,19 +70,19 @@ export class Riddle{
     //         });
     //     });
     // }
-    
+
     // async ask(){
-        // let endQuestion = false;
+    // let endQuestion = false;
     // while(!endQuestion){
-        
+
     //     const answer = await this.askSingl(`\n${this.taskDescription}\nEnter your answer: `);
     //     if(this.checkAnswer(answer)){
-        //         endQuestion = true;
-        //         console.log(`Congratulations :)`);
-        //     }
-        //     else{
-            //         console.log(`Try again :(`);    
-            //     }
+    //         endQuestion = true;
+    //         console.log(`Congratulations :)`);
+    //     }
+    //     else{
+    //         console.log(`Try again :(`);    
+    //     }
     // }
-    
+
 }
