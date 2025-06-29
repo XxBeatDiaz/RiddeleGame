@@ -3,6 +3,6 @@ export default {
     type: "choices",
     name: "Tough question",
     taskDescription: "What is the color of Wood?",
-    correctAnswer: 2,
+    correctAnswer: "2",
     choices: ["blue", "brown", "green", "black"],
 };
