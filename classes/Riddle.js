@@ -29,6 +29,7 @@ export class Riddle{
     }
       
     displayQuestion = function(){
+        console.log(`Difficulty level: ${this.name}\n`);       
         console.log(`${this.taskDescription}`);
     }
     

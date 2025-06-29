@@ -20,7 +20,7 @@ export class Player {
             sum += num;
         }
         const avg = sum / numbers.length;
-        console.log(`${this.name}. Total: ${sum.toFixed(3)}.\nAvg: ${avg.toFixed(3)}`);
+        console.log(`${this.name}.\nTotal: ${sum.toFixed(3)}\nAvg: ${avg.toFixed(3)}`);
     }
 
     // counter secons in console (async)
