@@ -1,5 +1,5 @@
 //imports
-import { regularGame } from "./Game.js";
+import { regularGame } from "./services/modsServ.js";
 
 //Start game (Menu soon)
 regularGame();

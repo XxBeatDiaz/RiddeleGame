@@ -1,6 +1,5 @@
 //imports
 import { question } from "readline-sync";
-// import { resolve } from "path";
 // import readline from "readline";
 
 

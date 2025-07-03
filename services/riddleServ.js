@@ -1,6 +1,6 @@
 //imports
-import { ChoiceRidle } from "./classes/choiceRidle.js";
-import { Riddle } from "./classes/Riddle.js";
+import { ChoiceRidle } from "../classes/ChoiceRidle.js";
+import { Riddle } from "../classes/Riddle.js";
 
 //Convert all obj riddles and load to an instances
 const loadRiddles = function (riddles) {
