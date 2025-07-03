@@ -3,7 +3,7 @@ import { ChoiceRidle } from "../classes/ChoiceRidle.js";
 import { Riddle } from "../classes/Riddle.js";
 
 //Convert all obj riddles and load to an instances
-const loadRiddles = function (riddles) {
+export const loadRiddles = function (riddles) {
     const loadedRiddles = riddles.map((r) => {
         if (r.type === "regular") {
             return new Riddle(r)
@@ -16,9 +16,8 @@ const loadRiddles = function (riddles) {
 }
 
 //Load by difficulty level
-const loadByDifficulty = function (riddles, difficultyChosen) {
+export const loadByDifficulty = function (riddles, difficultyChosen) {
     const byDiffArr = riddles.filter(r => { r.difficulty === difficultyChosen });
     return loadRiddles(byDiffArr);
 }
 
-export { loadRiddles, loadByDifficulty}
