@@ -1,9 +1,9 @@
 //imports
 import { question } from "readline-sync";
-import { Player } from "./classes/Player.js";
-import allRiddles from "./riddles/allRiddles.js";
+import { Player } from "../classes/Player.js";
+import allRiddles from "../riddles/allRiddles.js";
 import { loadRiddles } from "./riddleServ.js";
-import { runQuestions } from "./services/game.serv.js";
+import { runQuestions } from "./gameServ.js";
 //import readline from "readline";
 
 //Run default game (All riddles infinite fails)

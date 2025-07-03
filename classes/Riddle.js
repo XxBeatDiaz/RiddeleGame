@@ -33,7 +33,7 @@ export class Riddle {
 
     //Helpe func for ask func
     displayQuestion() {
-        console.log(`Difficulty level: ${this.name}\n`);
+        console.log(`Difficulty level: ${this.difficulty}\n${this.name}\n`);
         console.log(`${this.taskDescription}`);
     }
 
