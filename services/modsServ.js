@@ -1,7 +1,7 @@
 //imports
 import { question } from "readline-sync";
 import { Player } from "../classes/Player.js";
-import allRiddles from "../riddles/allRiddles.js";
+import allRiddles from "./allRiddles.js";
 import { loadRiddles } from "./riddleServ.js";
 import { runQuestions } from "./gameServ.js";
 //import readline from "readline";
